@@ -81,6 +81,7 @@
     }
   }
   @media screen and (max-width: 1023) {
+    padding-block: 48px;
     &__cards {
       flex-direction: column;
     }
@@ -92,8 +93,32 @@
       &__header {
         max-width: unset;
       }
-      &__media{
-        max-height: unset;
+      &__media {
+        max-height: initial;
+        display: flex;
+        flex-direction: column;
+        &-img {
+          &-main {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768) {
+    .payment-card {
+      &--acceptance {
+        .payment-card {
+          &__media {
+            &-img {
+              &-secondary {
+                position: static;
+                width: 50%;
+                align-self: flex-end;
+              }
+            }
+          }
+        }
       }
     }
   }

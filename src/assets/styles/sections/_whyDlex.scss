@@ -17,6 +17,7 @@
     padding-inline: 20px;
   }
   .swiper-slide {
+    flex: 0 0 auto;
     max-width: 264px;
     box-shadow: 0 20px 15px 0 rgba(18, 17, 39, 0.08);
     border-radius: 12px;
@@ -130,5 +131,10 @@
   }
   &__swiper-pagination {
     // margin-top: 40px;
+  }
+  @media screen and (max-width: 1023) {
+    &__swiper{
+        
+    }
   }
 }
