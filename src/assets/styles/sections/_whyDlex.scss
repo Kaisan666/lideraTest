@@ -1,0 +1,134 @@
+@use "../mixins" as *;
+@use "sass:color";
+@use "../vars" as *;
+.why-dlex {
+  padding-top: 24px;
+  padding-bottom: 96px;
+  .why-dlex__outer-swiper {
+    overflow: hidden;
+    margin-block: -50px;
+  }
+  &__content {
+    position: relative;
+  }
+  .swiper {
+    max-width: calc(1128px + 20px * 2);
+    padding-block: 40px;
+    padding-inline: 20px;
+  }
+  .swiper-slide {
+    max-width: 264px;
+    box-shadow: 0 20px 15px 0 rgba(18, 17, 39, 0.08);
+    border-radius: 12px;
+    height: auto;
+  }
+  &__card {
+    padding: 56px 24px;
+    height: 100%;
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      margin-top: 24px;
+    }
+    &-description {
+      font-size: 14px;
+      line-height: 180%;
+      color: $gray;
+      margin-top: 16px;
+    }
+  }
+  &__swiper {
+    &-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      &-bullets {
+        width: 60px;
+        overflow: hidden;
+        position: relative;
+        height: 24px;
+      }
+      .why-dlex__swiper-pagination-bullets-wrapper.swiper-pagination-bullets {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 24px;
+        position: absolute;
+        left: 8px;
+        top: 0;
+      }
+      .swiper-pagination-bullet {
+        background-color: #32334c;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+        --swiper-pagination-bullet-horizontal-gap: 0;
+        padding: 0;
+        width: 4px;
+        height: 4px;
+        flex: 0 0 auto;
+
+        &-active {
+          background-color: #9d097c;
+          width: 8px;
+          height: 8px;
+          position: relative;
+          flex: 0 0 auto;
+
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
+          &:not(:first-child) {
+            margin-left: 8px;
+          }
+          &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            border: 1px solid #9d097c;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      &-btn {
+        background-color: #fff0f5;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-arrow {
+          flex: 0 0 auto;
+          width: 16px;
+          height: 16px;
+        }
+        @include transition;
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: color.adjust(#fff0f5, $lightness: -5%);
+            @include transition;
+          }
+        }
+        &:active {
+          background-color: color.adjust(#fff0f5, $lightness: -7.5%);
+          @include transition;
+        }
+      }
+      &-prev-btn {
+      }
+      &-next-btn {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__swiper-pagination {
+    // margin-top: 40px;
+  }
+}

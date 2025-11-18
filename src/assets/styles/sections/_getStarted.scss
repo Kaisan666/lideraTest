@@ -1,0 +1,39 @@
+@use "../vars" as *;
+.get-started {
+  padding-block: 61px;
+  background-color: $white;
+  &__content {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    &-accent{
+        color: $indigo;
+    }
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 180%;
+    color: $gray;
+  }
+  &__button{
+    color: $white;
+    padding: 14px 32px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 1023) {
+    padding-block: 30px;
+    text-align: center;
+    &__content {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+  }
+  }
+}

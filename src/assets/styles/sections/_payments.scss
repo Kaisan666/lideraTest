@@ -1,0 +1,100 @@
+.payments {
+  padding-block: 96px;
+  background-color: #f9f9fb;
+  &__content {
+    margin-top: 42px;
+  }
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    // gap: 120px;
+    gap: 20px;
+  }
+  .payment-card {
+    width: 100%;
+    &__main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    &:nth-child(1) {
+      max-width: 456px;
+    }
+    &:nth-child(2) {
+      max-width: 552px;
+    }
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 456px;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 140%;
+      color: $indigo;
+    }
+    &__description {
+      font-size: 16px;
+      line-height: 180%;
+      color: $gray;
+    }
+    &__media {
+      position: relative;
+      max-height: 298px;
+      &-img {
+        &-main {
+          height: 100%;
+          box-shadow: 0 7px 31px 0 rgba(18, 17, 39, 0.12);
+          border-radius: 12px;
+          aspect-ratio: 456 / 298;
+          max-width: 456px;
+        }
+      }
+    }
+    &__features {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      &-item {
+        display: flex;
+        gap: 12px;
+        &::before {
+          content: url("/src/assets/icons/completedItem.svg");
+        }
+      }
+    }
+
+    &--acceptance {
+      .payment-card {
+        &__media {
+          &-img {
+            &-secondary {
+              position: absolute;
+              right: 0;
+              bottom: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1023) {
+    &__cards {
+      flex-direction: column;
+    }
+    .payment-card {
+      &:nth-child(1),
+      &:nth-child(2) {
+        max-width: unset;
+      }
+      &__header {
+        max-width: unset;
+      }
+      &__media{
+        max-height: unset;
+      }
+    }
+  }
+}

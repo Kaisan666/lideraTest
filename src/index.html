@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcel Vanilla App</title>
+  <link rel="stylesheet" href="./assets/styles/_index.scss">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__main">
+          <a class="header__logo" href="#">
+            <img src="./assets/icons/logo.svg" alt="Logo">
+          </a>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-list-item-link">Product</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-list-item-link">Features</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-list-item-link">Marketplace</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-list-item-link">Company</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__auth-buttons">
+          <button class="header__sign-in btn btn--white">Sign In</button>
+          <button class="header__sign-up btn btn--blue popup-btn">Sign Up</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero__content">
+          <div class="hero__header">
+            <h1 class="hero__title">
+              Have no fear of perfection, you'll never reach it.
+            </h1>
+            <p class="hero__subtitle">Create interactive user flow diagrams that tell a story.</p>
+
+          </div>
+          <div class="hero__media">
+            <div class="hero__media-wrapper">
+              <button class="hero__media-play-button">
+                <img class="hero__media-play-button-img" src="./assets/icons/playIcon.svg" alt="">
+              </button>
+              <img class="hero__media-spoiler" src="./assets/images/videoSpoiler.jpg" alt="asdas ">
+              <video class="hero__media-video" src="#" controls>asdasdasdas</video>
+              <img class="hero__media-notification-success hero__media-spacing-img"
+                src="./assets/images/heroSectionSuccessSending.png" alt=" ">
+              <img class="hero__media-notification-voucher hero__media-spacing-img"
+                src="./assets/images/heroSectionVoucher.png" alt=" ">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="why-dlex">
+        <div class="why-dlex__header section-header container">
+          <div class="section-header__wrapper">
+            <h2 class="section-header__title">Why dlex</h2>
+            <p class="section-header__subtitle">Creativity is nothing but the way to solve new problems.</p>
+          </div>
+        </div>
+        <div class="why-dlex__content">
+
+          <!-- <div class="why-dlex__outer-swiper">
+              <div class="container">
+            
+
+          </div>
+          </div> -->
+          <div class="swiper why-dlex__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon">
+                    <img src="./assets/icons/whyDlex/swiperUidesignIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">UI Design</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperResearchIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">UX & Research</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperDeliveryIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Fast delivery</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperSupportIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Customer support</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperUidesignIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">UI Design</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperResearchIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">UX & Research</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperDeliveryIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Fast delivery</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon">
+                    <img src="./assets/icons/whyDlex/swiperDeliveryIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Fast delivery</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon">
+                    <img src="./assets/icons/whyDlex/swiperDeliveryIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Fast delivery</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon">
+                    <img src="./assets/icons/whyDlex/swiperDeliveryIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Fast delivery</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="why-dlex__card">
+                  <div class="why-dlex__card-icon"><img src="./assets/icons/whyDlex/swiperSupportIcon.svg" alt="">
+                  </div>
+                  <h3 class="why-dlex__card-title">Customer support</h3>
+                  <div class="why-dlex__card-description">Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do
+                    amet sint. Velit officia consequat.</div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-dlex__swiper-pagination container">
+            <button class="why-dlex__swiper-pagination-prev-btn why-dlex__swiper-pagination-btn"
+              aria-label="pagination button prev">
+              <img src="./assets/icons/arrow.svg" class="why-dlex__swiper-pagination-btn-arrow" alt="">
+            </button>
+            <div class="why-dlex__swiper-pagination-bullets">
+              <div class="why-dlex__swiper-pagination-bullets-wrapper"></div>
+            </div>
+            <button class="why-dlex__swiper-pagination-next-btn why-dlex__swiper-pagination-btn"
+              aria-label="pagination button next">
+              <img src="./assets/icons/arrow.svg" class="why-dlex__swiper-pagination-btn-arrow" alt="">
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="payments">
+        <div class="payments__header section-header container">
+          <div class="section-header__wrapper">
+            <h2 class="section-header__title">Optimize your payments</h2>
+            <p class="section-header__subtitle">Grow your revenue</p>
+          </div>
+        </div>
+        <div class="payments__content">
+          <div class="payments__cards container">
+            <div class="payments__card payment-card">
+              <div class="payment-card__main-content">
+                <div class="payment-card__header">
+                  <h3 class="payment-card__title">Improve analytics</h3>
+                  <p class="payment-card__description">By leveraging predictive modeling and cross-source data
+                    synchronization or anomaly detection algorithms, empowering teams to make data-driven decisions.</p>
+                </div>
+                <div class="payment-card__media">
+                  <img src="./assets/images/paymentCardAnalytics.png" alt="" class="payment-card__media-img-main">
+                </div>
+                <ul class="payment-card__features">
+                  <li class="payment-card__features-item">
+                    Upgrade your customer experience instantly
+                  </li>
+                  <li class="payment-card__features-item">
+                    Retain more, happier customers
+                  </li>
+                  <li class="payment-card__features-item">
+                    Start with done-for-you account setup
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="payments__card payment-card payment-card--acceptance">
+              <div class="payment-card__main-content">
+                <div class="payment-card__header">
+                  <h3 class="payment-card__title">Maximize acceptance</h3>
+                  <p class="payment-card__description">By using deception or false suggestions or suppression of truth
+                    or
+                    other unethical means, which are believed and relied upon by.</p>
+                </div>
+                <div class="payment-card__media">
+                  <img src="./assets/images/paymentCardAcceptance.png" alt="" class="payment-card__media-img-main">
+                  <img src="./assets/images/paymentCardAcceptanceSecond.png" alt=""
+                    class="payment-card__media-img-secondary">
+                </div>
+                <ul class="payment-card__features">
+                  <li class="payment-card__features-item">
+                    Upgrade your customer experience instantly
+                  </li>
+                  <li class="payment-card__features-item">
+                    Retain more, happier customers
+                  </li>
+                  <li class="payment-card__features-item">
+                    Start with done-for-you account setup
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="get-started">
+        <div class="get-started__content container">
+          <div class="get-started__info">
+            <h2 class="get-started__title">Everything you need for <span class="get-started__title-accent">$99 a
+                month</span></h2>
+            <p class="get-started__description">Includes every feature we offer plus unlimited projects and
+              unlimited users</p>
+          </div>
+          <button class="get-started__button btn btn--blue popup-btn">Get Started Now</button>
+        </div>
+      </section>
+      <section class="boost-productivity">
+        <div class="boost-productivity__wrapper container">
+          <div class="boost-productivity__content">
+            <h2 class="boost-productivity__title">Boost your productivity. <br> Start using workflow today.</h2>
+            <p class="boost-productivity__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint velit officia consequat duis enim velit mollit.</p>
+            <button class="boost-productivity__sign-up btn btn--white popup-btn">Sign up for free</button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__content">
+          <div class="footer__info">
+            <a href="#" class="footer__logo" aria-label="link to main page">
+              <img src="./assets/icons/logoBlue.svg" alt="Logo" class="footer__logo-img">
+            </a>
+            <p class="footer__info-description">Making the world a better place through constructing elegant
+              hierarchies</p>
+            <div class="footer__socials">
+              <a href="#" class="footer__socials-link">
+                <img src="./assets/icons/logos/facebook.svg" alt="" class="footer__socials-link-img">
+              </a>
+              <a href="#" class="footer__socials-link">
+                <img src="./assets/icons/logos/twitter.svg" alt="" class="footer__socials-link-img">
+              </a>
+              <a href="#" class="footer__socials-link">
+                <img src="./assets/icons/logos/instagram.svg" alt="" class="footer__socials-link-img">
+              </a>
+              <a href="#" class="footer__socials-link">
+                <img src="./assets/icons/logos/github.svg" alt="" class="footer__socials-link-img">
+              </a>
+            </div>
+          </div>
+          <div class="footer__main">
+            <nav class="footer__pages">
+              <h2 class="footer__pages-title">Solutions</h2>
+              <div class="footer__pages-accordion">
+                <ul class="footer__pages-list">
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Marketing</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Analytics</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Commerce</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Insights</a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+            <nav class="footer__pages">
+              <h2 class="footer__pages-title">Support</h2>
+              <div class="footer__pages-accordion">
+                <ul class="footer__pages-list">
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Pricing</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Documentation</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Guides</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">API Status</a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+            <nav class="footer__pages">
+              <h2 class="footer__pages-title">Company</h2>
+              <div class="footer__pages-accordion">
+                <ul class="footer__pages-list">
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">About</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Blog</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Jobs</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Press</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Partners</a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+            <nav class="footer__pages">
+              <h2 class="footer__pages-title">Legal</h2>
+              <div class="footer__pages-accordion">
+                <ul class="footer__pages-list">
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Claim</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Privacy</a>
+                  </li>
+                  <li class="footer__pages-list-item">
+                    <a href="#" class="footer__pages-list-item-link">Terms</a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+          </div>
+        </div>
+        <p class="footer__copyright">© 2025 Dlex, Inc. All rights reserved</p>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./scripts/script.js"></script>
+  <form class="index-page popup-form" novalidate>
+    <div class="popup-form__main">
+      <div class="popup-form__main-content">
+        <div class="popup-form__logo">
+          <img src="./assets/icons/logo.svg" class="popup-form__logo-img" alt="">
+        </div>
+        <div class="popup-form__info">
+          <h2 class="popup-form__title">Join the club</h2>
+          <p class="popup-form__description">Subscribe and Get an Extra 25% Off on your first purchase.</p>
+        </div>
+        <div class="popup-form__field">
+          <input type="email" name="email" required placeholder="Email address" class="popup-form__input-mail">
+        </div>
+        <button type="submit" class="popup-form__submit-btn"> Subscribe</button>
+        <p class="popup-form__agreement">By signing up, you agree to Privacy Policy
+          and Terms of Use.</p>
+      </div>
+    </div>
+    <div class="popup-form__media">
+      <img src="./assets/images/indexPopupForm.png" alt="" class="popup-form__media-img">
+    </div>
+
+    <button class="popup-form__close" aria-label="Close button">
+      <img src="./assets/icons/cross.svg" alt="">
+    </button>
+  </form>
+</body>
+
+</html>

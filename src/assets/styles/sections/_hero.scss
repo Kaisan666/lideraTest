@@ -1,0 +1,102 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+@use "sass:color";
+.hero {
+  padding-top: 86px;
+  padding-bottom: 163px;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 120%;
+    text-align: center;
+    color: $black;
+    padding-inline: 10px;
+  }
+  &__subtitle {
+    font-size: 20px;
+    line-height: 180%;
+    color: $darkGray;
+  }
+  &__content {
+    padding-inline: 96px;
+  }
+
+  &__media {
+    padding-inline: 96px;
+    &-wrapper {
+      position: relative;
+      aspect-ratio: 744 / 418;
+      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+
+    }
+    &-play-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      width: 72px;
+      height: 72px;
+      border-radius: 100px;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include transition;
+      &-img {
+        flex-direction: 0 0 auto;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: color.adjust($white, $lightness: -10%);
+          @include transition;
+        }
+      }
+      &:active {
+        background-color: color.adjust($white, $lightness: -20%);
+        @include transition;
+      }
+    }
+    &-spoiler {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      z-index: 4;
+
+      object-fit: cover;
+    }
+    &-video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      z-index: 3;
+    }
+    &-spacing-img {
+      position: absolute;
+    }
+    &-notification {
+      &-success {
+        left: 100%;
+        top: 100%;
+        z-index: 3;
+        border-radius: 12px;
+        box-shadow: 0 40px 80px -16px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+}
+.floating-notification {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

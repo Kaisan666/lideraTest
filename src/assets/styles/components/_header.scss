@@ -1,0 +1,66 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+@use "sass:color";
+.header {
+  padding-block: 34px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  &__main {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  &__nav {
+    flex: 1 1 auto;
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      gap: 48px;
+
+      &-item {
+        &-link {
+          color: $gray;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 171%;
+          @include transition;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              color: $darkGray;
+              @include transition;
+            }
+          }
+          &:active {
+            color: $black;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+  &__auth-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  &__sign-in {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;
+    padding: 8px 24px;
+    color: $black;
+    
+    
+  }
+  &__sign-up {
+    line-height: 171%;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 24px;
+    color: $white;
+    
+  }
+}

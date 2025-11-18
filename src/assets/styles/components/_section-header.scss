@@ -1,0 +1,22 @@
+.section-header {
+  &__wrapper{
+  max-width: 604px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 170%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $indigo;
+  }
+  &__subtitle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    color: $black;
+  }
+}

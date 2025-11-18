@@ -1,0 +1,37 @@
+@use "../mixins" as *;
+@use "sass:color";
+@use "../vars" as *;
+.btn{
+    font-weight: 500;
+    border-radius: 6px;
+
+    &--white{
+        background-color: $white;
+      @include transition;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover{
+        background-color: color.adjust($white, $lightness: -5%);
+      @include transition;
+      }
+    }
+    &:active{
+        background-color: color.adjust($white, $lightness: -10%);
+      @include transition;
+    }
+    }
+    &--blue{
+      background-color: $indigo;
+      @include transition;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover{
+        background-color: color.adjust($indigo, $lightness: -5%);
+      @include transition;
+      }
+    }
+    &:active{
+        background-color: color.adjust($indigo, $lightness: -10%);
+      @include transition;
+    }
+    }
+}
