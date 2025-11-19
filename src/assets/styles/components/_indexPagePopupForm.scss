@@ -145,7 +145,7 @@
   @media screen and (max-width: 768) {
     flex-direction: column-reverse;
     max-height: unset;
-    height: 100vh;
+    height: 100dvh;
     .popup-form{
         &__media{
             height: 40%;

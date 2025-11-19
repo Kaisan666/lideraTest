@@ -21,6 +21,8 @@ const creativitySwiper = new Swiper(".why-dlex__swiper", {
   },
   on: {
     slideNextTransitionEnd: function (instance) {
+      let swiperSlidesLimit = null
+      let swiperSlidesReducer = null
       console.log(instance);
       const swiperElement = instance.el;
       // const currentSlide = instance.
@@ -34,14 +36,28 @@ const creativitySwiper = new Swiper(".why-dlex__swiper", {
       console.log(swiperBullets.style);
       console.log(swiperLeft);
       let newLeft = 8;
+      if(window.innerWidth >= 1023){
+        swiperSlidesLimit = 8
+        swiperSlidesReducer = 8
+      }
+      else if (window.innerWidth >= 768){
+        swiperSlidesLimit = 6
+        swiperSlidesReducer = 5
+      }
+      else{
+        swiperSlidesLimit = 4
+        swiperSlidesReducer = 5
+      }
       if (instance.activeIndex !== 0) {
         newLeft -= 20;
-        if (instance.activeIndex <= instance.slides.length - 4) {
+        if (instance.activeIndex <= instance.slides.length - swiperSlidesLimit) {
+          console.log("qweqwe");
+          
           const qwe = -(12 * (instance.activeIndex - 1));
           newLeft += qwe;
           console.log(newLeft);
         } else {
-          const qwe = -(12 * (instance.slides.length - 5));
+          const qwe = -(12 * (instance.slides.length - (swiperSlidesReducer)));
           newLeft += qwe;
           console.log(newLeft);
         }
