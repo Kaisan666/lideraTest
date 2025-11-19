@@ -100,6 +100,7 @@
   &__main {
     margin-top: 72px;
     padding-inline: 96px;
+    position: relative;
     &-wrapper {
       position: relative;
       aspect-ratio: 744 / 418;
@@ -127,6 +128,23 @@
         width: 25%;
         max-width: 173px;
       }
+    }
+  }
+  &__floating-img{
+    position: absolute;
+    &--sectors{
+      left: 0;
+      top: 50px;
+    }
+    &--emoji{
+      right: 0;
+      top: 50px;
+    }
+    &--arrow{
+      bottom: -25%;
+    left: -10%;
+    height: 170px;
+    transform: rotate(2deg);
     }
   }
   @media screen and (max-width: 1023) {

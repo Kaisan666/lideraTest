@@ -74,6 +74,7 @@
               position: absolute;
               right: 0;
               bottom: 36px;
+              max-width: 196px;
             }
           }
         }
@@ -99,7 +100,7 @@
         flex-direction: column;
         &-img {
           &-main {
-            max-width: 100%;
+            max-width: 80%;
           }
         }
       }
@@ -107,6 +108,13 @@
   }
   @media screen and (max-width: 768) {
     .payment-card {
+      &__media{
+        &-img{
+          &-main{
+            max-width: 100%;
+          }
+        }
+      }
       &--acceptance {
         .payment-card {
           &__media {

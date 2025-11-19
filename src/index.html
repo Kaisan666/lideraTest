@@ -87,18 +87,21 @@
           <div class="hero__main">
             <div class="hero__main-wrapper">
               <div class="hero__video-player">
-                <button class="hero__video-player-play-button">
-                  <img class="hero__video-player-play-button-img" src="./assets/icons/playIcon.svg" alt="">
+                <button class="hero__video-player-play-button" aria-label="play video button">
+                  <img class="hero__video-player-play-button-img" src="./assets/icons/playIcon.svg" alt="" aria-hidden="true">
                 </button>
-                <img class="hero__video-player-spoiler" src="./assets/images/videoSpoiler.jpg" alt="asdas ">
+                <img class="hero__video-player-spoiler" src="./assets/images/videoSpoiler.jpg" alt="video spoiler">
                 <video class="hero__video-player-video" src="./assets/videos/nuxtVideo.mp4" controls
-                  playsinline></video>
+                  playsinline aria-label="video"></video>
               </div>
               <img class="hero__main-notification-success hero__main-spacing-img"
                 src="./assets/images/heroSectionSuccessSending.png" alt=" ">
               <img class="hero__main-notification-voucher hero__main-spacing-img"
                 src="./assets/images/heroSectionVoucher.png" alt=" ">
             </div>
+            <img src="./assets/icons/videoIconRed.svg" class="hero__floating-img hero__floating-img--sectors" alt="" aria-hidden="true">
+            <img src="./assets/icons/memojiForVideo.svg" class="hero__floating-img hero__floating-img--emoji" alt="" aria-hidden="true">
+            <img src="./assets/images/curvedArrowForVideo.svg" class="hero__floating-img hero__floating-img--arrow" alt="" aria-hidden="true">
           </div>
         </div>
       </section>
@@ -270,7 +273,7 @@
                     synchronization or anomaly detection algorithms, empowering teams to make data-driven decisions.</p>
                 </div>
                 <div class="payment-card__media">
-                  <img src="./assets/images/paymentCardAnalytics.png" alt="" class="payment-card__media-img-main">
+                  <img src="./assets/images/paymentCardAnalytics.png" alt="Improve analytics image" class="payment-card__media-img-main" >
                 </div>
                 <ul class="payment-card__features">
                   <li class="payment-card__features-item">
@@ -295,9 +298,9 @@
                     other unethical means, which are believed and relied upon by.</p>
                 </div>
                 <div class="payment-card__media">
-                  <img src="./assets/images/paymentCardAcceptance.png" alt="" class="payment-card__media-img-main">
+                  <img src="./assets/images/paymentCardAcceptance.png" alt="Maximize acceptance image" class="payment-card__media-img-main">
                   <img src="./assets/images/paymentCardAcceptanceSecond.png" alt=""
-                    class="payment-card__media-img-secondary">
+                    class="payment-card__media-img-secondary" aria-hidden="true">
                 </div>
                 <ul class="payment-card__features">
                   <li class="payment-card__features-item">
