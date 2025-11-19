@@ -26,16 +26,8 @@
   &__content {
     padding-inline: 96px;
   }
-
-  &__media {
-    padding-inline: 96px;
-    &-wrapper {
-      position: relative;
-      aspect-ratio: 744 / 418;
-      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-
-    }
+  &__video-player {
+    height: 100%;
     &-play-button {
       position: absolute;
       left: 50%;
@@ -49,6 +41,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out 0.1ms, visibility 0s;
       @include transition;
       &-img {
         flex-direction: 0 0 auto;
@@ -71,6 +66,9 @@
       height: 100%;
       border-radius: 16px;
       z-index: 4;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out 0.1ms, visibility 0s;
 
       object-fit: cover;
     }
@@ -81,22 +79,87 @@
       border-radius: 16px;
       z-index: 3;
     }
+    &.active {
+      .hero__video-player {
+        &-play-button {
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+        }
+        &-spoiler {
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+        }
+        &-video {
+          z-index: 5;
+        }
+      }
+    }
+  }
+  &__main {
+    margin-top: 72px;
+    padding-inline: 96px;
+    &-wrapper {
+      position: relative;
+      aspect-ratio: 744 / 418;
+      box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 16px;
+    }
+
     &-spacing-img {
       position: absolute;
     }
     &-notification {
       &-success {
-        left: 100%;
-        top: 100%;
-        z-index: 3;
+        z-index: 4;
         border-radius: 12px;
+        top: 63%;
+        right: -25%;
+        width: 34%;
+        max-width: 250px;
         box-shadow: 0 40px 80px -16px rgba(0, 0, 0, 0.08);
+      }
+      &-voucher {
+        box-shadow: 0 40px 80px -16px rgba(0, 0, 0, 0.08);
+        left: -20%;
+        top: -12%;
+        width: 25%;
+        max-width: 173px;
       }
     }
   }
-}
-.floating-notification {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  @media screen and (max-width: 1023) {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    &__content {
+      padding-inline: 30px;
+    }
+  }
+  @media screen and (max-width: 768) {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    &__content {
+      padding-inline: 30px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__main {
+      padding-inline: 0px;
+      &-notification {
+        &-success {
+          right: 0;
+          top: 90%;
+        }
+        &-voucher {
+          top: -18%;
+          left: -3%;
+        }
+      }
+    }
+  }
 }

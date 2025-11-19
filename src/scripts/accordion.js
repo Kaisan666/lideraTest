@@ -26,9 +26,6 @@ pageNavs.forEach(pageNav => {
 })
 
 
-function openAccordion(accordionNode){
-    
-}
 function closeAllAccordion(){
     pageNavs.forEach(pageNav => {
         const accordion = pageNav.querySelector(".footer__pages-accordion")

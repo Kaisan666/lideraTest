@@ -19,4 +19,20 @@
     line-height: 140%;
     color: $black;
   }
+  @media screen and (max-width: 1023) {
+  &__subtitle {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    color: $black;
+  }
+  }
+  @media screen and (max-width: 768) {
+  &__subtitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: $black;
+  }
+  }
 }

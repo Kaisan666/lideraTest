@@ -10,6 +10,33 @@
 
 <body>
   <div class="wrapper">
+    
+    <div class="burger">
+      <div class="burger__inner container">
+          <nav class="burger__nav">
+            <ul class="burger__nav-list">
+              <li class="burger__nav-list-item">
+                <a href="#" class="burger__nav-list-item-link">Product</a>
+              </li>
+              <li class="burger__nav-list-item">
+                <a href="#" class="burger__nav-list-item-link">Features</a>
+              </li>
+              <li class="burger__nav-list-item">
+                <a href="#" class="burger__nav-list-item-link">Marketplace</a>
+              </li>
+              <li class="burger__nav-list-item">
+                <a href="#" class="burger__nav-list-item-link">Company</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="burger__auth-buttons">
+          <button class="burger__sign-in btn btn--white">Sign In</button>
+          <button class="burger__sign-up btn btn--blue popup-btn">Sign Up</button>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="header__inner container">
         <div class="header__main">
@@ -39,6 +66,11 @@
           <button class="header__sign-in btn btn--white">Sign In</button>
           <button class="header__sign-up btn btn--blue popup-btn">Sign Up</button>
         </div>
+        <div class="header__burger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -52,16 +84,19 @@
             <p class="hero__subtitle">Create interactive user flow diagrams that tell a story.</p>
 
           </div>
-          <div class="hero__media">
-            <div class="hero__media-wrapper">
-              <button class="hero__media-play-button">
-                <img class="hero__media-play-button-img" src="./assets/icons/playIcon.svg" alt="">
-              </button>
-              <img class="hero__media-spoiler" src="./assets/images/videoSpoiler.jpg" alt="asdas ">
-              <video class="hero__media-video" src="#" controls>asdasdasdas</video>
-              <img class="hero__media-notification-success hero__media-spacing-img"
+          <div class="hero__main">
+            <div class="hero__main-wrapper">
+              <div class="hero__video-player">
+                <button class="hero__video-player-play-button">
+                  <img class="hero__video-player-play-button-img" src="./assets/icons/playIcon.svg" alt="">
+                </button>
+                <img class="hero__video-player-spoiler" src="./assets/images/videoSpoiler.jpg" alt="asdas ">
+                <video class="hero__video-player-video" src="./assets/videos/nuxtVideo.mp4" controls
+                  playsinline></video>
+              </div>
+              <img class="hero__main-notification-success hero__main-spacing-img"
                 src="./assets/images/heroSectionSuccessSending.png" alt=" ">
-              <img class="hero__media-notification-voucher hero__media-spacing-img"
+              <img class="hero__main-notification-voucher hero__main-spacing-img"
                 src="./assets/images/heroSectionVoucher.png" alt=" ">
             </div>
           </div>

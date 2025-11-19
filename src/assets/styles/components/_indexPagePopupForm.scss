@@ -113,6 +113,7 @@
     }
     &__media {
       flex: 1 1 50%;
+      display: flex;
 
       &-img {
         width: 100%;
@@ -139,6 +140,24 @@
       margin-top: 24px;
       color: #8d8d8d;
       text-align: start;
+    }
+  }
+  @media screen and (max-width: 768) {
+    flex-direction: column-reverse;
+    max-height: unset;
+    height: 100vh;
+    .popup-form{
+        &__media{
+            height: 40%;
+            flex: 1 1 auto;
+            &-img{
+                height: auto;
+            }
+        }
+        &__main{
+            flex: 1 1 auto;
+            height: 60%;
+        }
     }
   }
 }

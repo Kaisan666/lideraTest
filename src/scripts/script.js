@@ -1,5 +1,8 @@
 import "./swipers"
 import "./accordion"
+import "./indexVideoPlayer"
+import "./burger"
+
 const popupButtons = document.querySelectorAll(".popup-btn")
 const popup = document.querySelector(".index-page.popup-form")
 const emailInput = popup.querySelector(".popup-form__input-mail")
@@ -8,43 +11,48 @@ const closeBtn = popup.querySelector(".popup-form__close")
 const backgroundFilter = document.createElement("div")
 backgroundFilter.classList.add("background-filter") 
 
+let controller = null
+
 function closePopup(){
     
     popup.classList.remove("active")
     popup.reset()
     console.log(123);
 }
-function openPopup(){
+export function openPopup(){
     popup.classList.add("active")
     
 }
 
 function openPopupBtnHandler(e){
     e.stopPropagation();
-    addBackground()
+    addBackground(".index-page.popup-form")
     openPopup()
 }
 
-function removeBackground(){
+ function removeBackground(){
     backgroundFilter.classList.remove("active")
     backgroundFilter.addEventListener("transitionend", () => {
         backgroundFilter.remove()
     }, {once : true})
-    document.removeEventListener("click", outSideClickHandler)
+    // document.removeEventListener("click", outSideClickHandler)
+    controller.abort()
 
 }
-function addBackground(){
+export function addBackground(selector){
+    controller = new AbortController()
     document.body.appendChild(backgroundFilter)
     backgroundFilter.classList.add("active")
-    document.addEventListener("click", outSideClickHandler)
+    document.addEventListener("click", (e) => {
+        outSideClickHandler(e, selector)
+    } , {signal : controller.signal})
 }
 
-function outSideClickHandler(e){
-    console.log(1231231232131);
+function outSideClickHandler(e, selector){
+    console.log(selector);
+    console.log(e.target);
     
-    // e.preventDefault()
-    // e.stopPropagation()
-    if (!e.target.closest(".index-page.popup-form")){
+    if (!e.target.closest(selector)){
         closePopup()
         removeBackground()
     }
