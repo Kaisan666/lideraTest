@@ -148,6 +148,21 @@
     height: 100dvh;
     border-radius: 0;
     .popup-form {
+      &__info {
+        margin-top: 10px;
+      }
+      &__agreement{
+        margin-top: 14px;
+      }
+      &__field{
+        margin-top: 15px;
+      }
+      &__title{
+        font-size: 24px;
+      }
+      &__description{
+        font-size: 18px;
+      }
       &__media {
         height: 40%;
         flex: 1 1 auto;
