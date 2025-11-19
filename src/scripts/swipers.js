@@ -21,98 +21,66 @@ const creativitySwiper = new Swiper(".why-dlex__swiper", {
   },
   on: {
     slideNextTransitionEnd: function (instance) {
-      let swiperSlidesLimit = null
-      let swiperSlidesReducer = null
-      console.log(instance);
       const swiperElement = instance.el;
-      // const currentSlide = instance.
       const swiperBullets = swiperElement.querySelector(
         ".swiper-pagination-bullets"
       );
+      const bullets = Array.from(
+        swiperBullets.querySelectorAll(".swiper-pagination-bullet")
+      );
+      const activeBullet = swiperBullets.querySelector(
+        ".swiper-pagination-bullet-active"
+      );
+      const activeBulletIndex = bullets.indexOf(activeBullet);
+
       const swiperLeft = parseFloat(
         getComputedStyle(swiperBullets).getPropertyValue("--left").trim()
       );
-      console.log(swiperBullets);
-      console.log(swiperBullets.style);
-      console.log(swiperLeft);
       let newLeft = 8;
-      if(window.innerWidth >= 1023){
-        swiperSlidesLimit = 8
-        swiperSlidesReducer = 8
-      }
-      else if (window.innerWidth >= 768){
-        swiperSlidesLimit = 6
-        swiperSlidesReducer = 5
-      }
-      else{
-        swiperSlidesLimit = 4
-        swiperSlidesReducer = 5
-      }
-      if (instance.activeIndex !== 0) {
+      if (activeBulletIndex !== 0) {
         newLeft -= 20;
-        if (instance.activeIndex <= instance.slides.length - swiperSlidesLimit) {
-          console.log("qweqwe");
-          
-          const qwe = -(12 * (instance.activeIndex - 1));
+        if (activeBulletIndex <= bullets.length - 5) {
+
+          const qwe = -(12 * (activeBulletIndex - 1));
           newLeft += qwe;
-          console.log(newLeft);
         } else {
-          const qwe = -(12 * (instance.slides.length - (swiperSlidesReducer)));
+          const qwe = -(12 * (bullets.length - 5));
           newLeft += qwe;
-          console.log(newLeft);
         }
       }
-      // else{
-      //   const qwe = -(12 * (instance.activeIndex - 1))
-      //   newLeft += qwe
-      // }
-      console.log(newLeft);
 
       swiperBullets.style.setProperty("--left", newLeft + "px");
-
-      console.log(swiperElement);
-
-      console.log("next start");
     },
-    slidePrevTransitionEnd: function (instance) {
-      console.log(instance);
+    slidePrevTransitionStart: function (instance) {
       const swiperElement = instance.el;
-      // const currentSlide = instance.
       const swiperBullets = swiperElement.querySelector(
         ".swiper-pagination-bullets"
       );
+      const bullets = Array.from(
+        swiperBullets.querySelectorAll(".swiper-pagination-bullet")
+      );
+      const activeBullet = swiperBullets.querySelector(
+        ".swiper-pagination-bullet-active"
+      );
+      const activeBulletIndex = bullets.indexOf(activeBullet);
+
       const swiperLeft = parseFloat(
         getComputedStyle(swiperBullets).getPropertyValue("--left").trim()
       );
-      console.log(swiperBullets);
-      console.log(swiperBullets.style);
-      console.log(swiperLeft);
       let newLeft = 8;
-      if (instance.activeIndex !== 0) {
+      if (activeBulletIndex !== 0) {
         newLeft -= 20;
-        if (instance.activeIndex <= instance.slides.length - 4) {
-          const qwe = -(12 * (instance.activeIndex - 1));
+        if (activeBulletIndex <= bullets.length - 5) {
+
+          const qwe = -(12 * (activeBulletIndex - 1));
           newLeft += qwe;
-          console.log(newLeft);
         } else {
-          const qwe = -(12 * (instance.slides.length - 5));
+          const qwe = -(12 * (bullets.length - 5));
           newLeft += qwe;
-          console.log(newLeft);
         }
       }
 
-      // else{
-      //   const qwe = -(12 * (instance.activeIndex - 1))
-      //   newLeft += qwe
-      // }
-      console.log(newLeft);
-
       swiperBullets.style.setProperty("--left", newLeft + "px");
-
-      console.log(swiperElement);
-
-      console.log("next start");
     },
   },
 });
-console.log(123);

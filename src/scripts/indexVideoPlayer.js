@@ -20,8 +20,6 @@ function videoPlayingHandler(e) {
     return;
   }
   if (e.target.currentTime >= (videoDuration / 2) && !isPopupShown) {
-    console.log("Пауза должна сработать!");
-    console.log("Пауза вызвана");
     addBackground();
     openPopup();
     isPopupShown = true;

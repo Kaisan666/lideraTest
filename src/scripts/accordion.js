@@ -7,15 +7,12 @@ pageNavs.forEach(pageNav => {
     const accordionHeight = getComputedStyle(accordion).getPropertyValue("--height").trim()
     const pagesList = pageNav.querySelector(".footer__pages-list")
     title.addEventListener("click", ()=> {
-        console.log(1233321);
-        
         if (window.innerWidth <= 425){
             if (accordion.dataset.open === "true"){
                 accordion.style.setProperty("--height", 0 + "px")
                 accordion.dataset.open = "false"
             }
             else {
-                console.log(12938123890123089);
                 
                 closeAllAccordion()
                 accordion.style.setProperty("--height", pagesList.offsetHeight + "px")

@@ -11,7 +11,6 @@ function closePopup(){
     
     popup.classList.remove("active")
     popup.reset()
-    console.log(123);
 }
 export function openPopup(){
     popup.classList.add("active")
@@ -42,8 +41,6 @@ export function addBackground(selector){
 }
 
 function outSideClickHandler(e, selector){
-    console.log(selector);
-    console.log(e.target);
     
     if (!e.target.closest(selector)){
         closePopup()
@@ -65,12 +62,10 @@ closeBtn.addEventListener("click", closeBtnClickHandler)
 
 function validateForm(e){
     e.preventDefault()
-    console.log(2133);
     
     const haveError = {value : false}
     const currentErrors = popup.querySelectorAll(".popup-form__error-message")
     currentErrors.forEach(error => {
-        console.log(error, "error");
         
         error.remove()
     })
@@ -85,13 +80,11 @@ function validateForm(e){
             body : formData
         })
         const data = await response.json()
-        console.log(data);
     })()
     
 }
 
 function validateEmail(haveError){
-    console.log(haveError);
     const emailMask = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     const errorMessage = document.createElement("span")
     errorMessage.classList.add("popup-form__error-message")
