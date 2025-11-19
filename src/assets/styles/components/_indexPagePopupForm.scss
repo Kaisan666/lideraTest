@@ -146,18 +146,21 @@
     flex-direction: column-reverse;
     max-height: unset;
     height: 100dvh;
-    .popup-form{
-        &__media{
-            height: 40%;
-            flex: 1 1 auto;
-            &-img{
-                height: auto;
-            }
+    border-radius: 0;
+    .popup-form {
+      &__media {
+        height: 40%;
+        flex: 1 1 auto;
+        &-img {
+          height: auto;
+          border-radius: 0;
         }
-        &__main{
-            flex: 1 1 auto;
-            height: 60%;
-        }
+      }
+      &__main {
+        flex: 1 1 auto;
+        height: 60%;
+        border: 0;
+      }
     }
   }
 }
