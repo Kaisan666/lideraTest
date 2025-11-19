@@ -16,6 +16,10 @@ body{
     &:has(.popup-form.active){
         overflow: hidden;
     }
+
+    &:has(.burger.open){
+        overflow: hidden;
+    }
     color: $black;
 }
 

@@ -115,36 +115,37 @@
       &-success {
         z-index: 4;
         border-radius: 12px;
-        top: 63%;
-        right: -25%;
+        top: 64%;
+        right: -24.5%;
         width: 34%;
         max-width: 250px;
         box-shadow: 0 40px 80px -16px rgba(0, 0, 0, 0.08);
       }
       &-voucher {
         box-shadow: 0 40px 80px -16px rgba(0, 0, 0, 0.08);
-        left: -20%;
-        top: -12%;
+        top: -12.5%;
+        left: -19.25%;
         width: 25%;
         max-width: 173px;
       }
     }
   }
-  &__floating-img{
+  &__floating-img {
     position: absolute;
-    &--sectors{
-      left: 0;
-      top: 50px;
+    &--sectors {
+      top: -57.5%;
+      left: -11vw;
     }
-    &--emoji{
-      right: 0;
-      top: 50px;
+    &--emoji {
+      top: -40%;
+      right: -2.5%;
     }
-    &--arrow{
+    &--arrow {
       bottom: -25%;
-    left: -10%;
-    height: 170px;
-    transform: rotate(2deg);
+      left: -10%;
+      max-height: 170px;
+      height: 50%;
+      transform: rotate(2deg);
     }
   }
   @media screen and (max-width: 1023) {
@@ -152,6 +153,22 @@
     padding-bottom: 100px;
     &__content {
       padding-inline: 30px;
+    }
+    &__floating-img {
+      &--arrow {
+        left: -8%;
+      }
+      &--sectors {
+        left: -0%;
+      }
+    }
+    &__main {
+      &-notification {
+        &-success {
+          top: 80%;
+          right: -15%;
+        }
+      }
     }
   }
   @media screen and (max-width: 768) {
@@ -176,6 +193,35 @@
         &-voucher {
           top: -18%;
           left: -3%;
+        }
+      }
+    }
+    &__floating-img {
+      &--arrow {
+        left: 10%;
+        bottom: -50%;
+        transform: rotate(83deg) scale(-1, 1);
+      }
+      &--sectors {
+        // display: none;
+        width: 50px;
+        top: -50px;
+        right: 0;
+        left: auto;
+      }
+      &--emoji {
+        // display: none;
+        top: -50px;
+        right: 50px;
+      }
+    }
+    &__video-player {
+      &-play-button {
+        width: 10vw;
+        height: 10vw;
+        &-img {
+          width: 50%;
+          height: 50%;
         }
       }
     }

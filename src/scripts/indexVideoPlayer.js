@@ -1,4 +1,4 @@
-import { openPopup, addBackground } from "./script";
+import { openPopup, addBackground } from "./popupForm";
 
 const videoPlayer = document.querySelector(".hero__video-player");
 const playButton = videoPlayer.querySelector(".hero__video-player-play-button");
