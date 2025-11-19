@@ -13,7 +13,7 @@
   }
   .swiper {
     max-width: calc(1128px + 20px * 2);
-    padding-block: 40px;
+    padding-top: 40px;
     padding-inline: 20px;
   }
   .swiper-slide {
@@ -41,6 +41,7 @@
   }
   &__swiper {
     &-pagination {
+      margin-top: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -49,17 +50,19 @@
         width: 60px;
         overflow: hidden;
         position: relative;
-        height: 24px;
+        height: 25px;
       }
       .why-dlex__swiper-pagination-bullets-wrapper.swiper-pagination-bullets {
+        --left : 8px;
         width: fit-content;
         display: flex;
         align-items: center;
         gap: 8px;
         height: 24px;
         position: absolute;
-        left: 8px;
+        left: var(--left);
         top: 0;
+        transition: left 0.1s ease-in-out;
       }
       .swiper-pagination-bullet {
         background-color: #32334c;
