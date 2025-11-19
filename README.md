@@ -1,5 +1,10 @@
 Проект на Parcel
-команды для запуска 
-npm istall
-npm run start из корневой
-для билда npm run build
+*- команды для запуска  -*
+`npm istall` - установка
+
+*- из корневой папки-*
+`npm run start`
+
+*- для билда -*
+`npm run build`
+
