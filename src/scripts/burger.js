@@ -1,4 +1,5 @@
 const burger = document.querySelector(".burger")
+if (burger){
 const header = document.querySelector(".header")
 const burgerBtn = header.querySelector(".header__burger-btn")
 
@@ -24,3 +25,5 @@ function closeBurgerMenu(){
     burger.classList.remove("open")
 }
 document.body.appendChild(burger)
+}
+

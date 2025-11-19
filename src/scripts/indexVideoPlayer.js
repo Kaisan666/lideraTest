@@ -1,6 +1,7 @@
 import { openPopup, addBackground } from "./popupForm";
 
 const videoPlayer = document.querySelector(".hero__video-player");
+if (videoPlayer){
 const playButton = videoPlayer.querySelector(".hero__video-player-play-button");
 const video = videoPlayer.querySelector(".hero__video-player-video");
 
@@ -31,4 +32,5 @@ function videoPlayingHandler(e) {
   }
   
   
+}
 }
