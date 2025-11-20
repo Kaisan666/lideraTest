@@ -21,7 +21,7 @@ function videoPlayingHandler(e) {
     return;
   }
   if (e.target.currentTime >= (videoDuration / 2) && !isPopupShown) {
-    addBackground();
+    addBackground(".index-page.popup-form");
     openPopup();
     isPopupShown = true;
   }
